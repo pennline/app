@@ -1,0 +1,4 @@
+#header a:hover,
+#header a:active {
+	border-bottom: none;
+}
