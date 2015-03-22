@@ -28,6 +28,8 @@ requires [composer](https://getcomposer.org/doc/00-intro.md)
 </VirtualHost>
 ```
 
-1. restart apache; e.g., mac - `apachectl restart` or ubuntu - `sudo /etc/init.d/apache2 restart`
+1. restart apache
+   * mac - `apachectl restart`
+   * ubuntu - `sudo /etc/init.d/apache2 restart`
 
-1. open a browser to http://pennline/
+1. open a browser to [http://pennline/](http://pennline/)
