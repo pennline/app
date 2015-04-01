@@ -34,6 +34,7 @@
 	set_include_path(
 		'config' . PATH_SEPARATOR .
 		'controls' . PATH_SEPARATOR .
+		'lib' . PATH_SEPARATOR .
 		'templates' . PATH_SEPARATOR .
 		'views' . PATH_SEPARATOR .
 		get_include_path()
@@ -43,6 +44,12 @@
 /**
  * autoloader
  */
+	function psr0Autoloader( $class_name ) {
+		$include_path = str_replace( array( '\\', '_', '..', '.' ), array( '/' ), $class_name );
+		include $include_path . '.php';
+	}
+
+	spl_autoload_register( 'psr0Autoloader' );
 	include 'vendor/autoload.php';
 
 
